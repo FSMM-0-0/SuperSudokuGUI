@@ -24,9 +24,9 @@ SuperSudokuGUI::SuperSudokuGUI(QWidget *parent)
 	QFont time_font;
 	time_font.setFamily("Consolas");
 	time_font.setWeight(65);
-	s = 13.0 * screen_height / 768.0;
+	s = 15.0 * screen_height / 768.0;
 	//s = 13.0 * 500.0 / 768.0;
-	time_font.setPointSize(s);
+	time_font.setPixelSize(s);
 	usetime = new QLabel(this);
 	usetime->setGeometry(440, 25, 500, 80);	
 	usetime->setScaledContents(true);
@@ -64,15 +64,15 @@ SuperSudokuGUI::SuperSudokuGUI(QWidget *parent)
 	menuBar->addMenu(menu[1]);
 	menuBar->addMenu(menu[2]);
 	menuBar->addMenu(menu[3]);
-	double hh = 30.0 * h / 630.0;
-	menuBar->setGeometry(0, 0, w, 25.0);
+	double hh = 25.0 * h / 630.0;
+	menuBar->setGeometry(0, 0, w, hh);
 
 	//标题初始化
 	QFont title_font;
 	title_font.setFamily("Consolas");
-	s = 25.0 * screen_height / 768.0;
+	s = 35.0 * screen_height / 768.0;
 	//s = 25.0 * 500.0 / 768.0;
-	title_font.setPointSize(s);
+	title_font.setPixelSize(s);
 	title_font.setWeight(75);
 	
 	title = new QLabel(this);
@@ -96,9 +96,9 @@ SuperSudokuGUI::SuperSudokuGUI(QWidget *parent)
 
 	//选择键初始化
 	QFont button_font;
-	s = 20.0 * screen_height / 768.0;
+	s = 30.0 * screen_height / 768.0;
 	//s = 20.0 * 500.0 / 768.0;
-	button_font.setPointSize(s);
+	button_font.setPixelSize(s);
 	button_font.setWeight(75);
 	button_font.setFamily("Consolas");
 
@@ -130,9 +130,9 @@ SuperSudokuGUI::SuperSudokuGUI(QWidget *parent)
 	QFont button_font2;
 	button_font2.setFamily("Consolas");
 	button_font2.setWeight(70);
-	s = 15.0 * screen_height / 768.0;
+	s = 20.0 * screen_height / 768.0;
 	//s = 15.0 * 500.0 / 768.0;
-	button_font2.setPointSize(s);
+	button_font2.setPixelSize(s);
 
 	newsudo = new QPushButton(this);
 	newsudo->setText("New");
@@ -296,16 +296,16 @@ void SuperSudokuGUI::InitBoard()
 	QFont sudoku_bound_font;
 	sudoku_bound_font.setFamily("Microsoft JhengHei");
 	sudoku_bound_font.setWeight(65);
-	s = 25.0 * screen_height / 768.0;
+	s = 30.0 * screen_height / 768.0;
 	//s = 25.0 * 500.0 / 768.0;
-	sudoku_bound_font.setPointSize(s);
+	sudoku_bound_font.setPixelSize(s);
 	QFont sudoku_light_font;
 	sudoku_light_font.setFamily("MV Boli");
 	//sudoku_light_font.setFamily("French Script MT");
 	sudoku_light_font.setWeight(45);
-	s = 20.0 * screen_height / 768.0;
+	s = 25.0 * screen_height / 768.0;
 	//s = 30.0 * 500.0 / 768.0;
-	sudoku_light_font.setPointSize(s);
+	sudoku_light_font.setPixelSize(s);
 
 	QSignalMapper *sudoMapper = new QSignalMapper(this);
 	for (int i = 1; i <= 9; i++) {
